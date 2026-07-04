@@ -1,0 +1,115 @@
+.wrapper {
+  min-height: 100vh;
+  background-color: #f6f1e7;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='9' fill='none' stroke='%23ddd2ba' stroke-width='2'/%3E%3Cline x1='11' y1='20' x2='29' y2='20' stroke='%23ddd2ba' stroke-width='2'/%3E%3Ccircle cx='20' cy='20' r='2.5' fill='%23ddd2ba'/%3E%3C/svg%3E");
+  background-size: 40px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.formBox {
+  background: #fff;
+  border: 3px solid #d3392f;
+  border-radius: 20px;
+  padding: 36px;
+  width: 100%;
+  max-width: 460px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.formTitle {
+  color: #d3392f;
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 22px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.fieldGroup {
+  margin-bottom: 16px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7a2e1d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.input,
+.select,
+.textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 2px solid #e8ddc8;
+  border-radius: 10px;
+  font-size: 14px;
+  background: #fdfbf6;
+  color: #333;
+  outline: none;
+  transition: border-color 0.15s ease;
+  font-family: inherit;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  border-color: #d3392f;
+  background: #fff;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 90px;
+  line-height: 1.4;
+}
+
+.btnSubmit {
+  width: 100%;
+  background: #d3392f;
+  color: #fff;
+  border: none;
+  padding: 13px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.15s ease;
+}
+
+.btnSubmit:hover {
+  background: #a8281f;
+}
+
+.btnVoltar {
+  width: 100%;
+  background: transparent;
+  border: 2px solid #e8ddc8;
+  color: #7a2e1d;
+  padding: 11px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.15s ease;
+}
+
+.btnVoltar:hover {
+  background: #f6f1e7;
+}

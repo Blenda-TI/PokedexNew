@@ -1,0 +1,234 @@
+.container {
+  min-height: 100vh;
+  background-color: #f6f1e7;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='9' fill='none' stroke='%23ddd2ba' stroke-width='2'/%3E%3Cline x1='11' y1='20' x2='29' y2='20' stroke='%23ddd2ba' stroke-width='2'/%3E%3Ccircle cx='20' cy='20' r='2.5' fill='%23ddd2ba'/%3E%3C/svg%3E");
+  background-size: 40px 40px;
+  background-repeat: repeat;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(135deg, #e0473c, #b8291f);
+  padding: 14px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  box-shadow: 0 4px 20px rgba(122, 30, 20, 0.25);
+  border-bottom: 3px solid #8f1f16;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pokeball {
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  border-radius: 50%;
+  border: 3px solid #222;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.pokeball::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 50%;
+  background: #d3392f;
+  border-bottom: 3px solid #222;
+}
+
+.pokeballCenter {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 10px; height: 10px;
+  background: #fff;
+  border: 3px solid #222;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.logoFloat {
+  height: 34px;
+  width: auto;
+  animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(1px 2px 2px rgba(0,0,0,0.25));
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.searchWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 14px;
+  font-size: 13px;
+  opacity: 0.55;
+  pointer-events: none;
+}
+
+.searchInput {
+  padding: 10px 16px 10px 34px;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+  font-size: 13px;
+  min-width: 230px;
+  background: rgba(204, 182, 182, 0.95);
+  transition: box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.searchInput:focus {
+  background: #000000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.4);
+}
+
+.btnNew {
+  background: #ffd93b;
+  color: #6a6260;
+  font-weight: 800;
+  padding: 10px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 13px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btnNew:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  background: #ffcc00;
+}
+
+.btnLogout {
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.15s ease;
+}
+
+.btnLogout:hover {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.mainGrid {
+  padding: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.noData {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #999;
+  font-size: 15px;
+  margin-top: 40px;
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalBox {
+  background: #fff;
+  border: 3px solid #d3392f;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+}
+
+.modalIcon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.modalTitle {
+  color: #222;
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 800;
+}
+
+.modalText {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.modalCancel {
+  background: #eee;
+  border: none;
+  color: #444;
+  padding: 10px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.modalCancel:hover {
+  background: #ddd;
+}
+
+.modalConfirm {
+  background: #d3392f;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.modalConfirm:hover {
+  background: #a8281f;
+}

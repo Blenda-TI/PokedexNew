@@ -1,0 +1,148 @@
+.card {
+  background: #fff;
+  border: 3px solid;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+}
+
+.name {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}
+
+.hp {
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  background: rgba(0,0,0,0.2);
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.imageBox {
+  position: relative;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 140px;
+}
+
+.image {
+  max-width: 100%;
+  max-height: 140px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 8px rgba(0,0,0,0.15));
+}
+
+.typeTag {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+.body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.attackRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.attackIcon {
+  font-size: 14px;
+}
+
+.attackName {
+  font-weight: 700;
+  font-size: 14px;
+  color: #222;
+}
+
+.description {
+  font-size: 12.5px;
+  color: #666;
+  font-style: italic;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.footer {
+  margin-top: 6px;
+  padding-top: 10px;
+  border-top: 1px dashed #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rarity {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+}
+
+.btnEdit, .btnDelete {
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btnEdit {
+  background: #3b6fd6;
+  color: #fff;
+}
+
+.btnEdit:hover {
+  background: #2d5abf;
+}
+
+.btnDelete {
+  background: #e3423a;
+  color: #fff;
+}
+
+.btnDelete:hover {
+  background: #c9342c;
+}
